@@ -1,0 +1,249 @@
+.header-logged-out {
+  height: 80px;
+}
+.header-logged-out .home-btn,
+.header-logged-out .sign-in-btn {
+  margin-right: 64px;
+}
+/* Remove header overlay ONLY when logged in */
+.header--logged-in::before {
+  background: rgba(0, 0, 0, 0.4) !important;
+  z-index: 0;
+}
+/* Line break under navigation in header */
+.header-nav .header-line {
+  width: 100%; /* Adjust to match nav button width */
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  margin: 0;
+  align-self: flex-start;
+}
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 10;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+}
+
+.header-line {
+  width: 100vw;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  margin: 0;
+  position: absolute;
+  left: 0;
+  top: 80px;
+  z-index: 2;
+}
+
+.header-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 104px;
+}
+
+.nav-btns {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.header-logged-out .nav-btns {
+  margin-right: 64px;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.header-logo {
+  height: 24px;
+  width: 200px;
+  color: white;
+  font-family: "Roboto Slab";
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: none;
+  margin: 19px 0 13px 104px;
+}
+
+.header-nav-line--saved-news {
+  width: calc(100vw - 208px);
+  margin-left: 104px;
+  margin-right: 104px;
+  border: none;
+  border-bottom: 2px solid #e0e0e0;
+  margin-top: 0px;
+  position: static;
+}
+
+/* font-family: "Roboto Slab";
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  margin-left: 104px;
+  flex: 0 0 auto;
+  text-decoration: none;
+} */
+
+.home-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+  font-family: "Roboto";
+  padding: 12px 50px;
+  margin-left: auto;
+  margin-right: 32px;
+}
+
+/* .home-btn::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 38px;
+  bottom: -17px;
+  width: 68px;
+  height: 3px; thickness of the line
+  background: transparent;
+  border-radius: 2px;
+} */
+
+.logout-username {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  padding: 12px 7px 12px 19px;
+  color: white;
+  font-family: "Roboto";
+}
+
+.logout-arrow {
+  height: 24px;
+  width: 24px;
+  margin-right: 15px;
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  border-radius: 100px;
+  cursor: pointer;
+  height: 48px;
+  width: 112px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  padding: 0;
+  margin: 0;
+  flex: 0 0 auto;
+}
+
+.saved-articles-btn {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #b6bcbf;
+  margin-right: 32px;
+}
+
+.header--saved-news {
+  padding-left: 104px;
+  padding-right: 104px;
+}
+.header--saved-news .home-btn,
+.header--saved-news .saved-articles-btn {
+  background: #fff;
+  color: #000;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 0;
+  margin-right: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+.header--saved-news .home-btn:hover,
+.header--saved-news .saved-articles-btn:hover {
+  background-color: #eee;
+  color: #000;
+}
+.header--saved-news .header-logo {
+  background: #fff;
+  color: #000 !important;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-weight: bold;
+  font-size: 24px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  margin-left: 0;
+}
+.header--saved-news .header-logo:hover {
+  background: #eee;
+  color: #000;
+}
+.header--saved-news .logout-btn {
+  background: #fff;
+  color: #000;
+  border: 2px solid #d1d2d6;
+  padding: 8px 16px;
+  border-radius: 100px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.header--saved-news .logout-btn:hover {
+  background: #eee;
+  color: #000;
+  border-color: #222;
+}
+.header--saved-news .logout-username {
+  color: #000;
+}
+.header--saved-news .logout-arrow img {
+  filter: invert(0) brightness(0) saturate(100%) sepia(100%) hue-rotate(0deg)
+    grayscale(100%);
+}
+.header-nav-line {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #e0e0e0;
+
+  margin-bottom: 0;
+  position: static;
+}
+
+.header-nav-line--saved-news {
+  width: 100vw;
+  margin-left: 0;
+  margin-right: 0;
+  left: 0;
+  position: absolute; /* or static, depending on your layout */
+}

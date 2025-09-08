@@ -1,0 +1,68 @@
+.nav {
+  max-height: 80px;
+}
+.nav-line {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  margin: 0;
+}
+
+.home-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-family: "Roboto";
+  padding: 12px 50px;
+  border-radius: 32px;
+  margin-right: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+}
+.logo {
+  height: 24px;
+  display: flex;
+  gap: 42px;
+  list-style: none;
+  margin: 19px 0 13px 104px;
+  padding: 0;
+  line-height: 24px;
+  color: #fff;
+  display: flex;
+  gap: 42px;
+  list-style: none;
+  color: #fff;
+  font-family: "Roboto Slab";
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.sign-in-btn {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 32px;
+  padding: 12px 50px;
+  font-size: 18px;
+  font-family: "Roboto";
+  cursor: pointer;
+  margin-right: 104px;
+  font-weight: 500;
+  box-shadow: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+}
+
+.sign-in-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-color: #fff;
+}

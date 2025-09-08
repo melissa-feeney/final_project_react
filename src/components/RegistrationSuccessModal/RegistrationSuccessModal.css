@@ -1,0 +1,76 @@
+/* RegistrationSuccessModal.css */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  border-radius: 24px;
+  background: #fff;
+  padding: 32px;
+  max-width: 400px;
+  /* margin: 0 auto; */
+  height: 182px;
+  width: 430px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.close-btn {
+  position: absolute;
+  top: -32px;
+  right: -32px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 2;
+  height: 40px;
+  width: 40px;
+  padding: 0;
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1;
+  padding: 0;
+  margin: 11px 42px 14px 4px;
+  word-break: break-word;
+  white-space: normal;
+  max-width: 100%;
+  text-align: left;
+  font-family: "Roboto";
+}
+
+.registration-success-sign-in-btn {
+  color: #1565c0;
+  background: none;
+  border: none;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  /* margin-top: 8px; */
+  text-align: left;
+  display: block;
+  padding-left: 4px;
+  font-family: "Inter";
+}
+
+.registration-success-sign-in-btn:hover {
+  color: #003c8f;
+}
