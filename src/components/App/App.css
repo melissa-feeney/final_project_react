@@ -3,8 +3,8 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 576x; /* or 100vh for full viewport */
-  z-index: -1; /* or -1 */
+  height: 576px;
+  z-index: -1;
 }
 
 .top-background {
@@ -53,7 +53,6 @@
 }
 
 .header {
-  /* background: rgba(0, 0, 0, 0.45); */
   position: relative;
   z-index: 10;
   width: 100vw;
@@ -61,4 +60,109 @@
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
+}
+
+.hamburger-menu {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger-menu svg {
+  width: 32px;
+  height: 32px;
+  fill: white;
+}
+
+@media (max-width: 600px) {
+  .header {
+    position: static;
+    width: 100%;
+    margin: 0;
+    padding: 0 16px;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .nav-btns,
+  .header-nav {
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 0;
+    gap: 0;
+  }
+
+  .home-btn,
+  .sign-in-btn {
+    font-size: 16px;
+    padding: 10px 24px;
+    margin: 8px 0 0 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .nav-btns,
+  .sign-in-btn,
+  .home-btn {
+    display: none !important;
+  }
+
+  .hamburger-menu {
+    display: flex !important;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    height: 32px !important;
+    width: 32px !important;
+    z-index: 100;
+  }
+
+  .main-title {
+    font-size: 2rem;
+    margin-top: 32px;
+    text-align: left;
+    padding: 0 8px;
+  }
+
+  .main-description {
+    font-size: 1rem;
+    padding: 0 8px;
+    text-align: left;
+  }
+
+  .search-form {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 16px !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 24px auto 0 auto !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+  }
+
+  .search-input {
+    width: 288px !important;
+    height: 56px !important;
+    border-radius: 24px !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    flex: none !important;
+  }
+
+  .search-btn {
+    width: 288px !important;
+    height: 56px !important;
+    border-radius: 24px !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    flex: none !important;
+    margin-left: 0 !important;
+  }
 }

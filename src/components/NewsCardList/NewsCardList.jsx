@@ -10,7 +10,7 @@ function NewsCardList({
   showMore,
   showMoreVisible,
   user,
-  loading, // <-- add this prop
+  loading,
 }) {
   if (loading) {
     return (

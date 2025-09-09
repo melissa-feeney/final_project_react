@@ -1,7 +1,4 @@
-// src/utils/api.js
-
 export function getItems() {
-  // Simulate fetching saved articles
   return new Promise((resolve) =>
     resolve([
       {
@@ -21,7 +18,6 @@ export function getItems() {
 }
 
 export function saveArticle(article) {
-  // Simulate saving an article
   return new Promise((resolve) => {
     resolve({
       _id: "65f7371e7bce9e7d331b11a0",
@@ -33,7 +29,6 @@ export function saveArticle(article) {
 }
 
 export function deleteArticle(articleId) {
-  // Simulate deleting an article
   return new Promise((resolve) => {
     resolve({ success: true, deletedId: articleId });
   });

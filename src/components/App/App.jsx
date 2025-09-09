@@ -22,37 +22,19 @@ import "./App.css";
 import SavedNews from "../SavedNews/SavedNews";
 import ErrorBoundary from "../ErrorBoundary";
 
-// function SavedNews({ savedArticles, user }) {
-//   return (
-//     <div>
-//       <h2 className="saved-card-list-title">Saved Articles</h2>
-//       <div className="saved-card-list">
-//         {savedArticles.length === 0 ? (
-//           <p>No saved articles yet.</p>
-//         ) : (
-//           savedArticles.map((article, idx) => (
-//             <NewsCard key={idx} article={article} user={user} marked={true} />
-//           ))
-//         )}
-//       </div>
-//     </div>
-//   );
-// }
-
 function App() {
-  const [modalType, setModalType] = useState(null); // 'login' or 'register'
+  const [modalType, setModalType] = useState(null);
   const [articles, setArticles] = useState([]);
   const [visibleCount, setVisibleCount] = useState(3);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [searched, setSearched] = useState(false);
-  const [user, setUser] = useState(null); // { name: "username" } or null
+  const [user, setUser] = useState(null);
   const [registeredName, setRegisteredName] = useState("");
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [savedArticles, setSavedArticles] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
-  // Registration handler
   const handleRegisterSubmit = ({ name, email, password }) => {
     setModalType(null);
     setShowSuccessModal(true);
@@ -69,12 +51,11 @@ function App() {
     setShowSuccessModal(false);
   };
 
-  // Login handler
   const handleLoginSubmit = ({ email, password }) => {
     if (registeredName) {
       setUser({ name: registeredName });
     } else {
-      setUser({ name: "Elise" }); // fallback if no registered name
+      setUser({ name: "Elise" });
     }
     setModalType(null);
   };
@@ -116,24 +97,20 @@ function App() {
     setLoading(false);
   };
 
-  // Save article handler
   const handleSaveArticle = (article) => {
     setSavedArticles((prev) => {
-      // Prevent duplicates by url
       if (prev.some((a) => a.url === article.url)) return prev;
-      // Attach the current searchTerm as the keyword
+
       return [...prev, { ...article, keyword: searchTerm }];
     });
   };
 
   const handleShowMore = () => setVisibleCount((prev) => prev + 3);
 
-  // Logout handler
   const handleLogout = () => {
     setUser(null);
   };
 
-  // Get current route for header styling
   function HeaderWithRoute(props) {
     const location = useLocation();
     const isSavedNews = location.pathname === "/saved-news";

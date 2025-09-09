@@ -3,17 +3,16 @@ import NewsCard from "../NewsCard/NewsCard";
 import "./SavedNews.css";
 
 function getKeywords(savedArticles) {
-  // Collect all keywords from articles
   const allKeywords = savedArticles
     .map((article) => article.keyword)
     .filter(Boolean);
-  // Remove duplicates
+
   const uniqueKeywords = Array.from(new Set(allKeywords));
   if (uniqueKeywords.length === 0) return null;
   if (uniqueKeywords.length === 1) return uniqueKeywords[0];
   if (uniqueKeywords.length === 2) return uniqueKeywords.join(", ");
   if (uniqueKeywords.length === 3) return uniqueKeywords.join(", ");
-  // Format: first two, and N other
+
   return `${uniqueKeywords[0]}, ${uniqueKeywords[1]}, and ${
     uniqueKeywords.length - 2
   } other`;

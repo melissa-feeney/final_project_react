@@ -15,7 +15,6 @@ function NewsCard({
   const [marked, setMarked] = React.useState(!!markedProp);
   const [hovered, setHovered] = React.useState(false);
 
-  // Only update state in event handlers, not during render
   const handleSaveClick = () => {
     if (user) {
       setMarked((prev) => {
@@ -43,8 +42,8 @@ function NewsCard({
     setShowTooltip(false);
     setHovered(false);
   };
-  // Color logic
-  let strokeColor = "#B6BCBF"; // normal
+
+  let strokeColor = "#B6BCBF";
   let fillColor = "transparent";
   if (marked) {
     strokeColor = "#2F71E5";

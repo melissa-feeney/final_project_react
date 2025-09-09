@@ -5,14 +5,14 @@
 .header-logged-out .sign-in-btn {
   margin-right: 64px;
 }
-/* Remove header overlay ONLY when logged in */
+
 .header--logged-in::before {
   background: rgba(0, 0, 0, 0.4) !important;
   z-index: 0;
 }
-/* Line break under navigation in header */
+
 .header-nav .header-line {
-  width: 100%; /* Adjust to match nav button width */
+  width: 100%;
   border: none;
   border-bottom: 2px solid rgba(255, 255, 255, 0.3);
   margin: 0;
@@ -52,7 +52,7 @@
 .nav-btns {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 42px;
 }
 
 .header-logged-out .nav-btns {
@@ -92,16 +92,6 @@
   position: static;
 }
 
-/* font-family: "Roboto Slab";
-  color: white;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 24px;
-  margin-left: 104px;
-  flex: 0 0 auto;
-  text-decoration: none;
-} */
-
 .home-btn {
   position: relative;
   display: flex;
@@ -116,18 +106,6 @@
   margin-left: auto;
   margin-right: 32px;
 }
-
-/* .home-btn::after {
-  content: "";
-  display: block;
-  position: absolute;
-  right: 38px;
-  bottom: -17px;
-  width: 68px;
-  height: 3px; thickness of the line
-  background: transparent;
-  border-radius: 2px;
-} */
 
 .logout-username {
   font-size: 18px;
@@ -170,7 +148,6 @@
 
 .header--saved-news {
   padding-left: 104px;
-  padding-right: 104px;
 }
 .header--saved-news .home-btn,
 .header--saved-news .saved-articles-btn {
@@ -245,5 +222,5 @@
   margin-left: 0;
   margin-right: 0;
   left: 0;
-  position: absolute; /* or static, depending on your layout */
+  position: absolute;
 }
