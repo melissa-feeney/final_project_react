@@ -1,5 +1,5 @@
 @media (max-width: 600px) {
-  .about-section {
+  .about__section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -8,7 +8,7 @@
     width: 100vw !important;
     box-sizing: border-box;
   }
-  .about-image-container {
+  .about__image-container {
     margin-bottom: 24px;
     flex: none;
     display: flex;
@@ -16,7 +16,7 @@
     align-items: center;
     width: 100%;
   }
-  .about-info {
+  .about__info {
     margin: 0 auto !important;
     padding: 0 !important;
     max-width: 100% !important;
@@ -26,31 +26,31 @@
     align-items: center;
     justify-content: center;
   }
-  .about-image-container {
+  .about__image-container {
     margin-bottom: 24px;
     flex: none;
   }
-  .about-image {
+  .about__image {
     width: 272px !important;
     height: 272px !important;
     border-radius: 50%;
   }
-  .about-info {
+  .about__info {
     margin: 0;
     padding: 0 16px;
     max-width: 100%;
     text-align: center;
   }
-  .about-title {
+  .about__title {
     font-size: 28px;
     margin-bottom: 12px;
   }
-  .about-description {
+  .about__description {
     font-size: 16px;
     line-height: 22px;
   }
 }
-.about-section {
+.about__section {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,47 +60,47 @@
   box-sizing: border-box;
 }
 
-.about-image-container {
+.about__image-container {
   flex: 0 0 350px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.about-image {
+.about__image {
   width: 464px;
   height: 464px;
   object-fit: cover;
   border-radius: 50%;
 }
 
-.about-info {
+.about__info {
   max-width: 600px;
   margin: 0 0 131px 56px;
   padding: 0;
 }
 
-.about-title {
+.about__title {
   font-size: 40px;
   font-weight: 400;
   margin-bottom: 0 0 16px;
   font-family: "Roboto Slab";
 }
 
-.about-description {
+.about__description {
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
   color: #1a1b22;
   margin-bottom: 12px;
-  font-family: "Roboto";
+  font-family: "Roboto", Arial, sans-serif;
 }
 
-.about-section.about-logged-out {
+.about__section.about--logged-out {
   padding: 80px 216px 80px 104px;
 }
 
-.about-section.about-logged-in {
+.about__section.about--logged-in {
   padding: 0px 216px 80px 104px;
   margin-top: 60px;
 }

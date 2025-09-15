@@ -3,8 +3,8 @@ import "./Preloader.css";
 
 function Preloader() {
   return (
-    <div className="preloader-container">
-      <div className="circle-preloader"></div>
+    <div className="preloader__container">
+      <div className="preloader__circle"></div>
       <span>Searching for news...</span>
     </div>
   );

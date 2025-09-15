@@ -1,4 +1,4 @@
-.modal-overlay {
+.modalWithForm__overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -11,7 +11,7 @@
   z-index: 1000;
 }
 
-.modal {
+.modalWithForm {
   position: relative;
   margin: 0;
   left: auto;
@@ -39,7 +39,7 @@
   align-items: stretch;
 }
 
-.modal-close {
+.modalWithForm__close {
   position: absolute;
   top: -32px;
   right: -32px;
@@ -56,26 +56,26 @@
   justify-content: center;
 }
 
-.modal-signup {
+.modalWithForm__signup {
   text-align: center;
   margin-top: 24px;
   font-size: 1rem;
   color: #888;
 }
 
-.modal-signup a {
+.modalWithForm__signup a {
   color: #2f71e5;
   text-decoration: none;
   font-weight: 500;
   margin-left: 4px;
 }
 
-.modal-signup a:hover {
+.modalWithForm__signup a:hover {
   text-decoration: underline;
 }
 
 @media (max-width: 600px) {
-  .modal {
+  .modalWithForm {
     width: calc(100vw - 32px) !important;
     min-width: calc(100vw - 32px) !important;
     left: 16px !important;
@@ -92,7 +92,7 @@
     position: absolute !important;
     top: 56px !important;
   }
-  .modal-close {
+  .modalWithForm__close {
     position: absolute !important;
     top: -48px !important;
     right: 8px !important;

@@ -1,17 +1,17 @@
-.register-modal-content {
+.register__content {
   display: flex;
   flex-direction: column;
   align-items: stretch;
   padding: 0 0 0 0;
 }
-.register-title {
+.register__title {
   font-size: 2rem;
   font-weight: bold;
   color: #1a1b22;
   margin-bottom: 24px;
 }
 
-.register-label {
+.register__label {
   display: flex;
   flex-direction: column;
   font-size: 1rem;
@@ -20,7 +20,7 @@
   margin-bottom: 0;
 }
 
-.register-input {
+.register__input {
   border: none;
   border-bottom: 2px solid #e0e0e0;
   padding: 12px 0 8px 0;
@@ -32,16 +32,16 @@
   transition: border-color 0.2s;
 }
 
-.register-input:focus {
+.register__input:focus {
   border-bottom: 2px solid #2f71e5;
 }
 
-.register-input::placeholder {
+.register__input::placeholder {
   color: #bdbdbd;
   font-size: 1.1rem;
 }
 
-.register-submit {
+.register__submit {
   margin-top: 32px;
   width: 100%;
   padding: 18px 0;
@@ -55,12 +55,12 @@
   box-shadow: none;
   transition: background 0.2s, color 0.2s;
 }
-.register-submit.active {
+.register__submit.active {
   background: #2f71e5;
   color: #fff;
   cursor: pointer;
 }
-.register-error {
+.register__error {
   color: #ff0000;
   font-size: 12px;
   margin-top: 2px;

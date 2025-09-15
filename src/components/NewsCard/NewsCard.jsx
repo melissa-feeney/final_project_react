@@ -53,7 +53,7 @@ function NewsCard({
   }
   return (
     <div
-      className="card"
+      className="newsCard"
       style={{
         position: "relative",
         cursor: onDeleteArticle ? "pointer" : "default",
@@ -65,8 +65,8 @@ function NewsCard({
       }
     >
       {onDeleteArticle && (
-        <div className="card-top-row">
-          {keyword && <div className="card-keyword-badge">{keyword}</div>}
+        <div className="newsCard__topRow">
+          {keyword && <div className="newsCard__keywordBadge">{keyword}</div>}
           <div
             style={{
               display: "flex",
@@ -76,7 +76,7 @@ function NewsCard({
           >
             {showTooltip && (
               <button
-                className="card-delete-tooltip-btn"
+                className="newsCard__delete-tooltipBtn"
                 tabIndex="-1"
                 type="button"
                 disabled
@@ -85,7 +85,7 @@ function NewsCard({
               </button>
             )}
             <button
-              className="card-delete-btn"
+              className="newsCard__deleteBtn"
               onClick={handleDeleteClick}
               aria-label="Remove from saved"
               onMouseEnter={handleDeleteMouseEnter}
@@ -150,23 +150,23 @@ function NewsCard({
         <img
           src={article.urlToImage}
           alt={article.title}
-          className="card-image"
+          className="newsCard__image"
         />
       )}
-      <div className="card-content">
-        <p className="card-date">
+      <div className="newsCard__content">
+        <p className="newsCard__date">
           {new Date(article.publishedAt).toLocaleDateString("en-US", {
             year: "numeric",
             month: "long",
             day: "numeric",
           })}
         </p>
-        <h3 className="card-title">{article.title}</h3>
+        <h3 className="newsCard__title">{article.title}</h3>
         {article.location && (
-          <p className="card-location">{article.location}</p>
+          <p className="newsCard__location">{article.location}</p>
         )}
-        <p className="card-description">{article.description}</p>
-        <div className="card-source">{article.source.name}</div>
+        <p className="newsCard__description">{article.description}</p>
+        <div className="newsCard__source">{article.source.name}</div>
       </div>
     </div>
   );

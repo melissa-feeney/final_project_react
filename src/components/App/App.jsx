@@ -1,4 +1,4 @@
-<div className="top-background"></div>;
+<div className="app__top-background"></div>;
 import {
   HashRouter as Router,
   Routes,
@@ -35,7 +35,7 @@ function App() {
   const [savedArticles, setSavedArticles] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
-  const handleRegisterSubmit = ({ name, email, password }) => {
+  const handleRegisterSubmit = ({ name }) => {
     setModalType(null);
     setShowSuccessModal(true);
     if (name) {
@@ -51,7 +51,7 @@ function App() {
     setShowSuccessModal(false);
   };
 
-  const handleLoginSubmit = ({ email, password }) => {
+  const handleLoginSubmit = () => {
     if (registeredName) {
       setUser({ name: registeredName });
     } else {
@@ -68,7 +68,6 @@ function App() {
   };
   const handleOpenRegister = () => setModalType("register");
 
-  // New search handler for SearchForm
   const handleSearch = async (term) => {
     setError("");
     setLoading(true);
@@ -89,7 +88,7 @@ function App() {
       } else {
         setArticles([]);
       }
-    } catch (err) {
+    } catch {
       setError(
         "Sorry, something went wrong during the request. Please try again later."
       );
@@ -111,7 +110,7 @@ function App() {
     setUser(null);
   };
 
-  function HeaderWithRoute(props) {
+  function HeaderWithRoute() {
     const location = useLocation();
     const isSavedNews = location.pathname === "/saved-news";
     return (
@@ -156,8 +155,8 @@ function App() {
                 <div
                   className={
                     user
-                      ? "top-background top-background-logged-in"
-                      : "top-background"
+                      ? "app__top-background app__top-background--logged-in"
+                      : "app__top-background"
                   }
                 ></div>
                 <Main
@@ -195,7 +194,7 @@ function App() {
             path="/saved-news"
             element={
               <>
-                <hr className="header-nav-line header-nav-line--saved-news" />
+                <hr className="header__nav_line header__nav_line--saved-news" />
                 <SavedNews savedArticles={savedArticles} user={user} />
                 <Footer />
               </>

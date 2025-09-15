@@ -27,7 +27,7 @@ export const authorize = (email, password) => {
   });
 };
 
-export const checkToken = (token) => {
+export const checkToken = () => {
   return new Promise((resolve) => {
     resolve({
       data: { name: "Fake User", email: "fake@example.com", _id: "fake-id" },

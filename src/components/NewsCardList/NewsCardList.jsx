@@ -14,34 +14,37 @@ function NewsCardList({
 }) {
   if (loading) {
     return (
-      <div className="news-card-list">
+      <div className="newsCardList">
         <Preloader />
       </div>
     );
   }
 
   return (
-    <div className="news-card-list">
-      <h2 className="news-card-list__title">Search results</h2>
+    <section className="newsCardList">
+      <h2 className="newsCardList__title">Search results</h2>
       {articles && articles.length > 0 ? (
-        articles.map((article, idx) => (
-          <NewsCard
-            key={article.url || idx}
-            article={article}
-            onSaveArticle={onSaveArticle}
-            onDeleteArticle={onDeleteArticle}
-            user={user}
-          />
-        ))
+        <ul className="newsCardList__list">
+          {articles.map((article, idx) => (
+            <li key={article.url || idx} className="newsCardList__item">
+              <NewsCard
+                article={article}
+                onSaveArticle={onSaveArticle}
+                onDeleteArticle={onDeleteArticle}
+                user={user}
+              />
+            </li>
+          ))}
+        </ul>
       ) : (
-        <p className="news-card-list__empty">No articles found.</p>
+        <p className="newsCardList__empty">No articles found.</p>
       )}
       {showMoreVisible && (
-        <button className="show-more-btn" onClick={showMore}>
+        <button className="newsCardList__showMoreBtn" onClick={showMore}>
           Show more
         </button>
       )}
-    </div>
+    </section>
   );
 }
 

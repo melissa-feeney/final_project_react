@@ -40,13 +40,13 @@ function RegisterModal({ onClose, onSubmit, onSignIn }) {
 
   return (
     <ModalWithForm title="" onClose={onClose} onSubmit={handleSubmit}>
-      <div className="login-modal-content">
-        <h2 className="login-title">Sign up</h2>
-        <label className="login-label">
+      <div className="loginModal__content">
+        <h2 className="loginModal__title">Sign up</h2>
+        <label className="loginModal__label">
           Email
           <input
             type="email"
-            className="login-input"
+            className="loginModal__input"
             placeholder="Enter email"
             required
             autoComplete="username"
@@ -55,14 +55,14 @@ function RegisterModal({ onClose, onSubmit, onSignIn }) {
             onBlur={() => setEmailTouched(true)}
           />
           {!isEmailValid && emailTouched && email && (
-            <span className="login-error">Invalid email address</span>
+            <span className="loginModal__error">Invalid email address</span>
           )}
         </label>
-        <label className="login-label">
+        <label className="loginModal__label">
           Password
           <input
             type="password"
-            className="login-input"
+            className="loginModal__input"
             placeholder="Enter password"
             required
             autoComplete="current-password"
@@ -70,11 +70,11 @@ function RegisterModal({ onClose, onSubmit, onSignIn }) {
             onChange={(e) => setPassword(e.target.value)}
           />
         </label>
-        <label className="login-label">
+        <label className="loginModal__label">
           Name
           <input
             type="text"
-            className="login-input"
+            className="loginModal__input"
             placeholder="Enter your name"
             required
             value={name}
@@ -84,16 +84,16 @@ function RegisterModal({ onClose, onSubmit, onSignIn }) {
         {error && <p className="signup-error">{error}</p>}
         <button
           type="submit"
-          className={`login-submit${isActive ? " active" : ""}`}
+          className={`loginModal__submit${isActive ? " active" : ""}`}
           disabled={!isActive}
         >
           Sign up
         </button>
-        <div className="login-footer">
+        <div className="loginModal__footer">
           <span>or </span>
           <button
             type="button"
-            className="login-signup-link"
+            className="loginModal__signup-link"
             onClick={onSignIn}
           >
             Sign in

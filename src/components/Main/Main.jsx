@@ -4,10 +4,10 @@ import Navigation from "../Navigation/Navigation";
 
 function Main({ onSignIn, user, onSaveArticle, onSearch }) {
   return (
-    <main className={`main${user ? " main-logged-in" : ""}`}>
+    <main className={`main${user ? " main--logged-in" : ""}`}>
       {!user && <Navigation onSignIn={onSignIn} />}
-      <h1 className="main-title">What's going on in the world?</h1>
-      <p className="main-subtitle">
+      <h1 className="main__title">What's going on in the world?</h1>
+      <p className="main__subtitle">
         Find the latest news on any topic and save them in your personal
         account.
       </p>

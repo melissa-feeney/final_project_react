@@ -3,17 +3,24 @@ import "./RegistrationSuccessModal.css";
 
 function RegistrationSuccessModal({ onSignIn, onClose }) {
   return (
-    <div className="modal-overlay">
-      <div className="modal-content">
-        <button onClick={onClose} className="close-btn" aria-label="Close">
+    <div className="modalWithForm__overlay">
+      <div className="registrationSuccessModal__content">
+        <button
+          onClick={onClose}
+          className="registrationSuccessModal__closeBtn"
+          aria-label="Close"
+        >
           &times;
         </button>
-        <h2 className="modal-title">
+        <h2 className="modal__title">
           Registration successfully
           <br />
           completed!
         </h2>
-        <button onClick={onSignIn} className="registration-success-sign-in-btn">
+        <button
+          onClick={onSignIn}
+          className="registrationSuccessModal__signInBtn"
+        >
           Sign in
         </button>
       </div>

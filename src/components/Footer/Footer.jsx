@@ -3,29 +3,29 @@ import "./Footer.css";
 function Footer() {
   return (
     <footer className="footer">
-      <div className="footer-left">
-        <span className="footer-copyright">
+      <div className="footer__left">
+        <span className="footer__copyright">
           © 2025 Supersite, Powered by News API
         </span>
       </div>
-      <div className="footer-right">
-        <nav className="footer-nav">
-          <a href="/" className="footer-link">
+      <div className="footer__right">
+        <nav className="footer__nav">
+          <a href="/" className="footer__link">
             Home
           </a>
           <a
             href="https://tripleten.com"
-            className="footer-link"
+            className="footer__link"
             target="_blank"
             rel="noopener noreferrer"
           >
             TripleTen
           </a>
         </nav>
-        <div className="footer-social">
+        <div className="footer__social">
           <a
             href="https://github.com/"
-            className="footer-icon"
+            className="footer__icon"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -36,7 +36,7 @@ function Footer() {
           </a>
           <a
             href="https://facebook.com/"
-            className="footer-icon"
+            className="footer__icon"
             target="_blank"
             rel="noopener noreferrer"
           >

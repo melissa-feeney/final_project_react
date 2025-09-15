@@ -3,13 +3,13 @@ import "./ModalWithForm.css";
 
 function ModalWithForm({ title, children, onClose, onSubmit }) {
   return (
-    <div className="modal-overlay">
-      <div className="modal">
-        <button className="modal-close" onClick={onClose}>
+    <div className="modalWithForm__overlay">
+      <div className="modalWithForm">
+        <button className="modalWithForm__close" onClick={onClose}>
           &times;
         </button>
-        {title && <h2 className="modal-title">{title}</h2>}
-        <form className="modal-form" onSubmit={onSubmit}>
+        {title && <h2 className="modalWithForm__title">{title}</h2>}
+        <form className="modalWithForm__form" onSubmit={onSubmit}>
           {children}
         </form>
       </div>

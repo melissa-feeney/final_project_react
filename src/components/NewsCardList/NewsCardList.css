@@ -1,4 +1,4 @@
-.news-card-list {
+.newsCardList {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
@@ -11,7 +11,7 @@
   background-color: #f5f6f7;
 }
 
-.news-card-list__empty {
+.newsCardList__empty {
   width: 100%;
   text-align: center;
   color: #888;
@@ -21,7 +21,7 @@
   padding: 0;
 }
 
-.news-card-list__title {
+.newsCardList__title {
   width: 100%;
   text-align: left;
   font-size: 40px;
@@ -32,7 +32,7 @@
   font-family: "Roboto Slab", serif;
 }
 
-.show-more-btn {
+.newsCardList__showMoreBtn {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -46,7 +46,7 @@
   height: 64px;
   background-color: #e8e8e8;
   border: none;
-  font-family: "Roboto";
+  font-family: "Roboto", Arial, sans-serif;
   font-size: 18px;
   font-weight: 500;
   line-height: 24px;

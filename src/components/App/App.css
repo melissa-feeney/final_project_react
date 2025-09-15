@@ -1,4 +1,4 @@
-.top-background-logged-in {
+.app__top-background--logged-in {
   position: absolute;
   top: 0;
   left: 0;
@@ -7,7 +7,7 @@
   z-index: -1;
 }
 
-.top-background {
+.app__top-background {
   position: absolute;
   top: 0;
   left: 0;
@@ -23,7 +23,7 @@
   height: 576px;
 }
 
-.top-background {
+.app__top-background {
   width: 100%;
   height: 576px;
   background-image: url("/background-image.jpg");
@@ -32,7 +32,7 @@
   background-repeat: no-repeat;
 }
 
-.saved-card-list {
+.saved__card-list {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
@@ -44,7 +44,7 @@
   position: relative;
 }
 
-.saved-card-list-title {
+.saved__card-list-title {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 24px;
@@ -62,7 +62,7 @@
   margin-right: -50vw;
 }
 
-.hamburger-menu {
+.hamburgerMenu {
   display: none;
   background: none;
   border: none;
@@ -72,7 +72,7 @@
   justify-content: center;
 }
 
-.hamburger-menu svg {
+.hamburgerMenu svg {
   width: 32px;
   height: 32px;
   fill: white;
@@ -88,15 +88,15 @@
     justify-content: space-between;
   }
 
-  .nav-btns,
-  .header-nav {
+  .nav__btns,
+  .header__nav {
     flex-direction: column;
     align-items: flex-end;
     margin: 0;
     gap: 0;
   }
 
-  .home-btn,
+  .home__btn,
   .sign-in-btn {
     font-size: 16px;
     padding: 10px 24px;
@@ -105,13 +105,13 @@
     box-sizing: border-box;
   }
 
-  .nav-btns,
+  .nav__btns,
   .sign-in-btn,
-  .home-btn {
+  .home__btn {
     display: none !important;
   }
 
-  .hamburger-menu {
+  .hamburgerMenu {
     display: flex !important;
     position: absolute;
     top: 16px;
@@ -121,7 +121,7 @@
     z-index: 100;
   }
 
-  .main-title {
+  .main__title {
     font-size: 2rem;
     margin-top: 32px;
     text-align: left;

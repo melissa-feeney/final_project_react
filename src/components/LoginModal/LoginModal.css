@@ -1,23 +1,23 @@
-.login-modal-content {
+.loginModal__content {
   z-index: 1000;
   position: relative;
 }
-.login-modal-content {
+.loginModal__content {
   display: flex;
   flex-direction: column;
   align-items: stretch;
   padding: 0 0 0 0;
 }
-.login-title {
+.loginModal__title {
   font-size: 24px;
   line-height: 1;
   font-weight: bold;
   color: #1a1b22;
   margin-bottom: 24px;
-  font-family: "Roboto";
+  font-family: "Roboto", Arial, sans-serif;
 }
 
-.login-label {
+.loginModal__label {
   display: flex;
   flex-direction: column;
   font-size: 1rem;
@@ -28,7 +28,7 @@
   font-family: "Inter";
 }
 
-.login-input {
+.loginModal__input {
   border: none;
   border-bottom: 2px solid #e0e0e0;
   padding: 8px 0 8px 0;
@@ -41,16 +41,16 @@
   font-family: "Inter";
 }
 
-.login-input:focus {
+.loginModal__input:focus {
   border-bottom: 2px solid #2f71e5;
 }
 
-.login-input::placeholder {
+.loginModal__input::placeholder {
   color: #bdbdbd;
   font-size: 1.1rem;
 }
 
-.login-submit {
+.loginModal__submit {
   margin-top: 32px;
   width: 100%;
   padding: 18px 0;
@@ -63,26 +63,26 @@
   cursor: not-allowed;
   box-shadow: none;
   transition: background 0.2s, color 0.2s;
-  font-family: "Roboto";
+  font-family: "Roboto", Arial, sans-serif;
 }
-.login-submit.active {
+.loginModal__submit.active {
   background: #2f71e5;
   color: #fff;
   cursor: pointer;
 }
-.login-error {
+.loginModal__error {
   color: #e74c3c;
   font-size: 12px;
   margin-top: 2px;
 }
-.login-footer {
+.loginModal__footer {
   margin-top: 24px;
   text-align: center;
   font-size: 1rem;
   color: #222;
 }
 
-.login-signup-link {
+.loginModal__signup-link {
   background: none;
   border: none;
   color: #2f71e5;
@@ -94,7 +94,7 @@
   font-family: "Inter";
 }
 
-.login-submit.active {
+.loginModal__submit.active {
   background: #2f71e5;
   color: #fff;
   cursor: pointer;

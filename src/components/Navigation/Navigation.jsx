@@ -3,6 +3,15 @@ import "./Navigation.css";
 import CloseIcon from "../../assets/close.svg";
 
 function Navigation({ onSignIn, isModalOpen }) {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
+
+  React.useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth < 600);
+    }
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   const [menuOpen, setMenuOpen] = useState(false);
 
   React.useEffect(() => {
@@ -21,9 +30,9 @@ function Navigation({ onSignIn, isModalOpen }) {
         <a className="logo" href="/">
           NewsExplorer
         </a>
-        <ul className="nav-btns">
+        <ul className="nav__btns">
           <li>
-            <a className="home-btn" href="/">
+            <a className="home__btn" href="/">
               Home
             </a>
           </li>
@@ -33,9 +42,9 @@ function Navigation({ onSignIn, isModalOpen }) {
             </button>
           </li>
         </ul>
-        {!isModalOpen && (
+        {!isModalOpen && isMobile && (
           <button
-            className="hamburger-menu"
+            className="hamburgerMenu"
             aria-label="Open menu"
             onClick={() => {
               setMenuOpen(true);
@@ -57,8 +66,8 @@ function Navigation({ onSignIn, isModalOpen }) {
       <hr className="nav-line" />
 
       {menuOpen && !isModalOpen && (
-        <div className="mobile-menu-overlay">
-          <div className="mobile-menu-header">
+        <div className="mobileMenu__overlay">
+          <div className="mobileMenu__header">
             <a className="logo" href="/">
               NewsExplorer
             </a>
@@ -75,9 +84,9 @@ function Navigation({ onSignIn, isModalOpen }) {
               />
             </button>
           </div>
-          <ul className="mobile-menu-list">
+          <ul className="mobileMenu__list">
             <li>
-              <a className="home-btn" href="/">
+              <a className="home__btn" href="/">
                 Home
               </a>
             </li>

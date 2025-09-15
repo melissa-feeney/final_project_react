@@ -12,12 +12,12 @@ body {
 }
 @media (max-width: 600px) {
   .main,
-  .top-background,
+  .app__top-background,
   .header {
     width: 100% !important;
   }
 
-  .hamburger-menu {
+  .hamburgerMenu {
     position: absolute;
   }
   .search-form {
@@ -37,22 +37,22 @@ body {
     margin-bottom: 0 !important;
   }
 }
-.header--saved-news .logout-btn:hover {
+.header__saved-news .header__logout-btn:hover {
   border: 2px solid #1a1b22;
 }
-.header--saved-news .header-logo:hover {
+.header__saved-news .header__logo:hover {
   background: #fff;
   color: #000;
 }
-.header--saved-news .saved-articles-btn:hover {
+.header__saved-news .header__saved-articles-btn:hover {
   background: #fff;
   color: #000;
 }
-.header--saved-news .logout-btn:hover {
+.header__saved-news .header__logout-btn:hover {
   background: #fff;
   color: #000;
 }
-.header--saved-news .home-btn {
+.header__saved-news .home__btn {
   background: #fff;
   color: #000;
   border: none;
@@ -64,7 +64,7 @@ body {
   margin-right: 8px;
   transition: background 0.2s, color 0.2s;
 }
-.header--saved-news .home-btn:hover {
+.header__saved-news .home__btn:hover {
   background: #fff;
   color: #000;
 }
@@ -85,7 +85,7 @@ body {
   align-items: center;
 }
 
-.main-logged-in {
+.main--logged-in {
   max-height: 496px;
 }
 body {
@@ -103,7 +103,7 @@ body {
     height: 890px;
   }
 
-  .nav-btns {
+  .nav__btns {
     display: flex;
     gap: 42px;
     list-style: none;
@@ -115,7 +115,7 @@ body {
     background: rgba(255, 255, 255, 0.08);
     color: #fff;
   }
-  .main-title {
+  .main__title {
     font-weight: 400;
     font-size: 60px;
     line-height: 64px;
@@ -125,12 +125,12 @@ body {
     text-align: center;
   }
 
-  .main-subtitle {
+  .main__subtitle {
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
     color: #fff;
-    font-family: "Roboto";
+    font-family: "Roboto", Arial, sans-serif;
     text-align: center;
   }
 
@@ -209,7 +209,7 @@ body {
     top: 16px;
     left: 16px;
   }
-  .main-title {
+  .main__title {
     font-size: 36px !important;
     font-weight: 400 !important;
     line-height: 40px !important;
@@ -218,7 +218,7 @@ body {
     text-align: left;
     padding: 0 8px;
   }
-  .main-subtitle {
+  .main__subtitle {
     font-size: 18px !important;
     font-weight: 400 !important;
     line-height: 24px !important;

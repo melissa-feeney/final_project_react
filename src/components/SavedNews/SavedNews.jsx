@@ -25,9 +25,9 @@ function SavedNews({ savedArticles, user }) {
     setArticles((prev) => prev.filter((a) => a.url !== articleToDelete.url));
   };
   return (
-    <div className="saved-news-container">
-      <div className="saved-news-subtitle">Saved articles</div>
-      <h2 className="saved-card-list-title">
+    <div className="savedNews-container">
+      <div className="savedNews-subtitle">Saved articles</div>
+      <h2 className="saved__card-list-title">
         {user?.name}, you have {articles.length} saved articles
       </h2>
       {keywordsSummary && (
@@ -35,23 +35,24 @@ function SavedNews({ savedArticles, user }) {
           By keywords: <b>{keywordsSummary}</b>
         </div>
       )}
-      <div className="saved-news-articles-section">
-        <div className="saved-card-list">
+      <div className="savedNews-articles-section">
+        <ul className="saved__card-list">
           {articles.length === 0 ? (
             <p>No saved articles yet.</p>
           ) : (
             articles.map((article, idx) => (
-              <NewsCard
-                key={idx}
-                article={article}
-                user={user}
-                marked={true}
-                keyword={article.keyword}
-                onDeleteArticle={handleDeleteArticle}
-              />
+              <li key={idx} className="saved__card-list-item">
+                <NewsCard
+                  article={article}
+                  user={user}
+                  marked={true}
+                  keyword={article.keyword}
+                  onDeleteArticle={handleDeleteArticle}
+                />
+              </li>
             ))
           )}
-        </div>
+        </ul>
       </div>
     </div>
   );
