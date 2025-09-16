@@ -1,4 +1,4 @@
-.app__top-background--logged-in {
+.app__top-background_logged-in {
   position: absolute;
   top: 0;
   left: 0;
@@ -42,6 +42,7 @@
   width: auto;
   z-index: 1;
   position: relative;
+  list-style: none;
 }
 
 .saved__card-list-title {

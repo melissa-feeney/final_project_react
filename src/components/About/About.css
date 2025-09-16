@@ -96,11 +96,11 @@
   font-family: "Roboto", Arial, sans-serif;
 }
 
-.about__section.about--logged-out {
+.about__section.about_logged-out {
   padding: 80px 216px 80px 104px;
 }
 
-.about__section.about--logged-in {
+.about__section.about_logged-in {
   padding: 0px 216px 80px 104px;
   margin-top: 60px;
 }

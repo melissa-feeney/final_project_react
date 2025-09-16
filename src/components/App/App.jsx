@@ -155,7 +155,7 @@ function App() {
                 <div
                   className={
                     user
-                      ? "app__top-background app__top-background--logged-in"
+                      ? "app__top-background app__top-background__logged-in"
                       : "app__top-background"
                   }
                 ></div>
@@ -194,7 +194,7 @@ function App() {
             path="/saved-news"
             element={
               <>
-                <hr className="header__nav_line header__nav_line--saved-news" />
+                <hr className="header__nav_line header__nav_line__saved-news" />
                 <SavedNews savedArticles={savedArticles} user={user} />
                 <Footer />
               </>

@@ -1,3 +1,18 @@
+.newsCardList__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.newsCardList__item {
+  flex: 0 1 calc(33.333% - 24px);
+  box-sizing: border-box;
+}
+
 .newsCardList {
   display: flex;
   flex-wrap: wrap;
@@ -50,4 +65,21 @@
   font-size: 18px;
   font-weight: 500;
   line-height: 24px;
+}
+
+.newsCardList__list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .newsCardList__list {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .newsCardList__item {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 }

@@ -5,7 +5,7 @@ function About({ user }) {
   return (
     <section
       className={`about__section ${
-        user ? "about--logged-in" : "about--logged-out"
+        user ? "about_logged-in" : "about_logged-out"
       }`}
     >
       <div className="about__image-container">

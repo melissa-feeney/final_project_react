@@ -31,6 +31,7 @@
   background: #f5f6f7;
   box-sizing: border-box;
   padding: 62px 0 32px;
+  list-style: none;
 }
 
 .saved-keywords {

@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Header.css";
 
 function Header({ user, onLogout, savedNewsPage }) {
+  const navigate = useNavigate();
   const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
 
   useEffect(() => {
@@ -34,7 +36,11 @@ function Header({ user, onLogout, savedNewsPage }) {
           </button>
         </div>
         {isMobile && (
-          <button className="hamburgerMenu" aria-label="Open menu">
+          <button
+            className="hamburgerMenu"
+            aria-label="Go to Saved News"
+            onClick={() => navigate("/saved-news")}
+          >
             <svg
               width="32"
               height="32"

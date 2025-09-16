@@ -85,7 +85,7 @@ body {
   align-items: center;
 }
 
-.main--logged-in {
+.main_logged-in {
   max-height: 496px;
 }
 body {
