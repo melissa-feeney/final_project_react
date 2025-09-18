@@ -1,1 +1,84 @@
-
+@font-face {
+  font-family: "Inter";
+  src: url("../../vendor/fonts/final-project_fonts_latin/inter-400-regular.woff2")
+      format("woff2"),
+    url("../../vendor/fonts/final-project_fonts_latin/inter-400-regular.woff")
+      format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../../vendor/fonts/final-project_fonts_latin/inter-500.woff2")
+      format("woff2"),
+    url("../../vendor/fonts/final-project_fonts_latin/inter-500.woff")
+      format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../vendor/fonts/final-project_fonts_latin/roboto-400-regular.woff2")
+      format("woff2"),
+    url("../../vendor/fonts/final-project_fonts_latin/roboto-400-regular.woff")
+      format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../vendor/fonts/final-project_fonts_latin/roboto-500.woff2")
+      format("woff2"),
+    url("../../vendor/fonts/final-project_fonts_latin/roboto-500.woff")
+      format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../vendor/fonts/final-project_fonts_latin/roboto-700.woff2")
+      format("woff2"),
+    url("../../vendor/fonts/final-project_fonts_latin/roboto-700.woff")
+      format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../vendor/fonts/final-project_fonts_latin/roboto-900.woff2")
+      format("woff2"),
+    url("../../vendor/fonts/final-project_fonts_latin/roboto-900.woff")
+      format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto Slab";
+  src: url("../../vendor/fonts/final-project_fonts_latin/roboto-slab-400-regular.woff2")
+      format("woff2"),
+    url("../../vendor/fonts/final-project_fonts_latin/roboto-slab-400-regular.woff")
+      format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto Slab";
+  src: url("../../vendor/fonts/final-project_fonts_latin/roboto-slab-700.woff2")
+      format("woff2"),
+    url("../../vendor/fonts/final-project_fonts_latin/roboto-slab-700.woff")
+      format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  margin: 0;
+  padding: 0;
+}

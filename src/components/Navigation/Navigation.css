@@ -1,0 +1,220 @@
+.mobileMenu__list .sign-in-btn {
+  width: 288px !important;
+  height: 56px !important;
+}
+
+.hamburgerMenu {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburgerMenu svg {
+  width: 32px;
+  height: 32px;
+  fill: white;
+}
+
+@media (max-width: 600px) {
+  .hamburgerMenu {
+    display: flex !important;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    height: 32px;
+    width: 32px;
+    z-index: 100;
+  }
+}
+
+.mobileMenu__overlay .nav__btns,
+.mobileMenu__overlay .home__btn,
+.mobileMenu__overlay .sign-in-btn {
+  display: flex !important;
+}
+.mobileMenu__list .home__btn {
+  display: block !important;
+  border: none !important;
+}
+.mobileMenu__list .sign-in-btn {
+  display: block !important;
+}
+.mobileMenu__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #18191a;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.mobileMenu__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.close-menu {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.mobileMenu__list {
+  list-style: none;
+  padding: 0 16px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.mobileMenu__list .home__btn,
+.mobileMenu__list .sign-in-btn {
+  width: 100%;
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 16px;
+  border-radius: 32px;
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  display: block !important;
+}
+.nav {
+  max-height: 80px;
+  position: relative;
+}
+.nav-line {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  margin: 0;
+}
+
+.home__btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-family: "Roboto", Arial, sans-serif;
+  padding: 12px 50px;
+  border-radius: 32px;
+  margin-right: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+}
+.logo {
+  height: 24px;
+  display: flex;
+  gap: 42px;
+  list-style: none;
+  margin: 19px 0 13px 104px;
+  padding: 0;
+  line-height: 24px;
+  color: #fff;
+  display: flex;
+  gap: 42px;
+  list-style: none;
+  color: #fff;
+  font-family: "Roboto Slab";
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.sign-in-btn {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 32px;
+  padding: 12px 50px;
+  font-size: 18px;
+  font-family: "Roboto", Arial, sans-serif;
+  cursor: pointer;
+  margin-right: 104px;
+  font-weight: 500;
+  box-shadow: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+}
+
+.sign-in-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-color: #fff;
+}
+
+@media (max-width: 600px) {
+  .logo {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    padding: 0;
+    margin: 0;
+    display: block;
+  }
+  .close-menu {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  .close-menu svg {
+    width: 24px;
+    height: 24px;
+    stroke: #fff;
+    stroke-width: 2;
+  }
+  .mobileMenu__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    padding-bottom: 24px;
+    background: #18191a;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+  }
+  .mobileMenu__list {
+    margin-top: 32px;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 601px) {
+  .mobileMenu__overlay {
+    display: none !important;
+  }
+  .hamburgerMenu {
+    display: none !important;
+  }
+}
